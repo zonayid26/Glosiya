@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosiya | Pure Water. Pure Life.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 3 Color Palette based on image */
+            --sky-blue: #95d5e8;
+            --aqua-blue: #00aed9;
+            --deep-blue: #005c8a;
+            --brand-dark: #003a5d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--brand-dark);
+            color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Luxury Water Background with Sun Burst Effect */
+        .liquid-gradient {
+            background: linear-gradient(180deg, var(--sky-blue) 0%, var(--aqua-blue) 60%, var(--deep-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Light Burst / Sun Rays Effect */
+        .light-burst {
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            opacity: 0.8;
+            animation: pulse-light 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-light {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.5; }
+            100% { transform: scale(1.2) rotate(5deg); opacity: 0.8; }
+        }
+
+        .ripple-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: ripple 10s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.3; }
+            50% { transform: scale(1.1) translate(-1%, 1%); opacity: 0.5; }
+        }
+
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float-up var(--duration) infinite ease-in;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(110vh) scale(0); opacity: 0; }
+            20% { opacity: 0.4; }
+            100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+        }
+
+        .glass-premium {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 58, 93, 0.3);
+        }
+
+        .aqua-glow:hover {
+            box-shadow: 0 0 30px rgba(149, 213, 232, 0.4);
+            border-color: #ffffff;
+        }
+
+        .input-focus-glow:focus {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border-color: #ffffff;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--brand-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--sky-blue); border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+    "qrcode.react": "https://esm.sh/qrcode.react@^4.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
